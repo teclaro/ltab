@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @university_a.present? %>
   <% if @university_a.errors.any? %>
     <% @university_a.errors.full_messages.each do |message| %>
@@ -16,9 +15,7 @@
 
 <hr>
 
-<!-- Form university_a start -->
 <form action="/create_university_a" method="post">
-<!-- Form university_a end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create university a

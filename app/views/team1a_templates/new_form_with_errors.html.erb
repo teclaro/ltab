@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @team1a.present? %>
   <% if @team1a.errors.any? %>
     <% @team1a.errors.full_messages.each do |message| %>
@@ -16,9 +15,7 @@
 
 <hr>
 
-<!-- Form team1a start -->
 <form action="/create_team1a" method="post">
-<!-- Form team1a end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create team1a
