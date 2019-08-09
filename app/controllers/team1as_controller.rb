@@ -1,6 +1,7 @@
 class Team1asController < ApplicationController
   def index
-    @team1as = Team1a.page(params[:page]).per(10)
+    @q = Team1a.ransack(params[:q])
+    @team1as = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("team1a_templates/index.html.erb")
   end

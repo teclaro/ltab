@@ -1,6 +1,7 @@
 class UniversityAsController < ApplicationController
   def index
-    @university_as = UniversityA.page(params[:page]).per(10)
+    @q = UniversityA.ransack(params[:q])
+    @university_as = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("university_a_templates/index.html.erb")
   end
