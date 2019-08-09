@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   root :to => "university_as#index"
   # Routes for the Team1a resource:
 
