@@ -1,0 +1,55 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Team1a #<%= @team1a.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/team1as" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link team1a start -->
+      <div class="col">
+        <a href="/team1as/<%= @team1a.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit team1a
+        </a>
+      </div>
+      <!-- Edit link team1a end -->
+
+      <!-- Delete link team1a start -->
+      <div class="col">
+        <a href="/delete_team1a/<%= @team1a.id %>" class="btn btn-block btn-outline-secondary">
+          Delete team1a
+        </a>
+      </div>
+      <!-- Delete link team1a end -->
+    </div>
+
+    <dl>
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@team1a.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@team1a.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

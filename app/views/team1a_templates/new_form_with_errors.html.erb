@@ -1,0 +1,32 @@
+<!-- Validation failure messages -->
+<% if @team1a.present? %>
+  <% if @team1a.errors.any? %>
+    <% @team1a.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new team1a
+</h1>
+
+
+<hr>
+
+<!-- Form team1a start -->
+<form action="/create_team1a" method="post">
+<!-- Form team1a end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create team1a
+  </button>
+</form>
+
+<hr>
+
+<a href="/team1as">
+  Go back
+</a>
